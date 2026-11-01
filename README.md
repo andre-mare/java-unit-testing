@@ -12,10 +12,10 @@ The course has nine Maven modules, from a first `@Test` in Module 1 to test temp
 ## Table of Contents
 - [Java Unit Testing with JUnit 6](#java-unit-testing-with-junit-6)
   - [Table of Contents](#table-of-contents)
-  - [Getting started](#getting-started)
+  - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
-    - [Build and test](#build-and-test)
-  - [Course modules](#course-modules)
+    - [Build and Test](#build-and-test)
+  - [Course Modules](#course-modules)
   - [Project structure](#project-structure)
   - [Running tests](#running-tests)
     - [Tags and Module 5 profiles](#tags-and-module-5-profiles)
@@ -27,14 +27,14 @@ The course has nine Maven modules, from a first `@Test` in Module 1 to test temp
   - [Resources](#resources)
   - [License](#license)
 
-## Getting started
+## Getting Started
 
 ### Prerequisites
 
 - **JDK 26 or later.** The build compiles with `--release 26`, so an older JDK fails even though JUnit 6 itself only needs Java 17.
 - **Maven 3.9 or later.** The project has no Maven Wrapper, so Maven must be installed. It was tested with Maven 3.9.16.
 
-### Build and test
+### Build and Test
 
 ```bash
 git clone https://github.com/andre-mare/java-unit-testing.git
@@ -42,25 +42,24 @@ cd java-unit-testing
 mvn test
 ```
 
-The build should end with `BUILD SUCCESS` after running 886 tests, 25 of them skipped. The skips are intentional: they demonstrate `@Disabled`, assumptions and conditional execution, so the exact number can vary with your operating system and environment variables.
+The build should end with `BUILD SUCCESS`. Some tests are reported as skipped on purpose: they demonstrate `@Disabled`, assumptions and conditional execution. The exact number of tests depends on your operating system, CPU architecture, JDK version and environment, such as whether the `CI` variable is set.
 
-## Course modules
+## Course Modules
 
 Work through the modules in order. They build on each other conceptually, but their code is independent, so you can also run any module on its own.
 
-| Module | Level | Topics | Domain under test |
+| Module | Title | Level | Topics |
 | --- | --- | --- | --- |
-| [1. Foundations](module-01/) | Beginner | First tests, test outcomes, class and method rules, lifecycle methods, the test tree, composed annotations | Calculator |
-| [2. Assertions, assumptions and exceptions](module-02/) | Beginner | `Assertions`, AssertJ, `Assumptions`, `assertThrows` | Bank account |
-| [3. Readable and skippable tests](module-03/) | Beginner | `@DisplayName`, display name generators, `@Disabled` | Password policy |
-| [4. Structuring test suites](module-04/) | Intermediate | Test instance lifecycle, `@Nested`, test interfaces and contract tests | Bounded stack, money |
-| [5. Controlling what runs, in what order, and for how long](module-05/) | Intermediate | Conditional execution, tags, execution order, `@Timeout` | App config, onboarding flow, rate limiter |
-| [6. Dependency injection](module-06/) | Intermediate | Built-in and custom `ParameterResolver`s, Mockito | OAuth 2.0 client-credentials service |
-| [7. Data-driven tests](module-07/) | Intermediate to advanced | `@RepeatedTest`, `@ParameterizedTest`, argument sources, conversion and aggregation, `@ParameterizedClass` | IBANs, payments, token validation |
-| [8. Templates and dynamic tests](module-08/) | Advanced | `@TestTemplate`, `@ClassTemplate`, `@TestFactory` | Currency conversion, consents, primes, OAuth scopes |
-| [9. Built-in extensions and parallel execution](module-09/) | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution | Audit log, amount formatting, session expiry, issuer settings |
+| [Module 1](module-01/README.md) | Foundations | Beginner | First tests, test outcomes, class and method rules, lifecycle methods, the test tree, composed annotations |
+| [Module 2](module-02/README.md) | Assertions, assumptions and exceptions | Beginner | `Assertions`, AssertJ, `Assumptions`, `assertThrows` |
+| [Module 3](module-03/README.md) | Readable and skippable tests | Beginner | `@DisplayName`, display name generators, `@Disabled` |
+| [Module 4](module-04/README.md) | Structuring test suites | Intermediate | Test instance lifecycle, `@Nested`, test interfaces and contract tests |
+| [Module 5](module-05/README.md) | Controlling what runs, in what order, and for how long | Intermediate | Conditional execution, tags, execution order, `@Timeout` |
+| [Module 6](module-06/README.md) | Dependency injection | Intermediate | Built-in and custom `ParameterResolver`s, Mockito |
+| [Module 7](module-07/README.md) | Data-driven tests | Intermediate to advanced | `@RepeatedTest`, `@ParameterizedTest`, argument sources, conversion and aggregation, `@ParameterizedClass` |
+| [Module 8](module-08/README.md) | Templates and dynamic tests | Advanced | `@TestTemplate`, `@ClassTemplate`, `@TestFactory` |
+| [Module 9](module-09/README.md) | Built-in extensions and parallel execution | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution |
 
-The [course outline](docs/JUnit%206%20Course%20Outline.md) lists the APIs and labs for each section, with links to the matching User Guide pages. It was written before the code, so where they differ, such as the Java version, package names and some lab classes, the code is correct.
 
 ## Project structure
 
