@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.example</groupId>
+		<artifactId>java-unit-testing</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>module-05</artifactId>
+	<name>Module 5: Controlling Order</name>
+
+	<profiles>
+		<profile>
+			<id>fast</id>
+			<properties>
+				<groups>fast</groups>
+			</properties>
+		</profile>
+		<profile>
+			<id>no-slow</id>
+			<properties>
+				<excludedGroups>expected-failure-tests,slow</excludedGroups>
+			</properties>
+		</profile>
+		<profile>
+			<id>security</id>
+			<properties>
+				<groups>security</groups>
+			</properties>
+		</profile>
+		<profile>
+			<id>integration</id>
+			<properties>
+				<groups>integration</groups>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>

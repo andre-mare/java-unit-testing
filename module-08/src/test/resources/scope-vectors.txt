@@ -1,0 +1,19 @@
+# OAuth 2.0 scope test vectors (RFC 6749, section 3.3) for ScopeVectorsTest.
+# Format: VALID [scope] <number of distinct tokens>
+#     or: INVALID [scope] <reason>
+# The scope is everything between the first '[' and the last ']'.
+VALID [openid] 1
+VALID [openid profile email] 3
+VALID [accounts payments:write] 2
+VALID [openid openid] 1
+VALID [OpenID openid] 2
+VALID [urn:example:scope/read] 1
+VALID [a!b#c] 1
+VALID [x]y] 1
+INVALID [] empty
+INVALID [openid  profile] double space
+INVALID [ openid] leading space
+INVALID [openid ] trailing space
+INVALID [say"hi"] double quote
+INVALID [back\slash] backslash
+INVALID [café] non-ASCII
