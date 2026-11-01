@@ -5,30 +5,12 @@
 [![Maven 3.9](https://img.shields.io/badge/Maven-3.9-C71A36)](https://maven.apache.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
-Learn unit testing in Java by reading, running and breaking real tests.
+Learn unit testing in Java by reading, running and breaking real tests. In Java, the standard framework for writing them is JUnit, and JUnit 6 is its current major version, with Java 17 as its minimum. This repository teaches JUnit 6 by example. Every concept is a test you can run, read and change.
 
-This repository is a hands-on course in JUnit 6, the current version of Java's most widely used test framework. It takes you from your first `@Test` to writing your own test templates and running a suite in parallel, in nine modules. Every example is a test that runs: there are no snippets to copy into an empty project.
-
-## What makes it different?
-
-- **Realistic code to test.** Each module has its own small production domain from banking and identity: bank accounts, IBAN validation, payment schemes, OAuth 2.0 tokens and scopes, PSD2-style consents and security audit logs. You test the kind of rules real systems have, such as expiry, rounding, permissions and time zones, not just `add(2, 2)`.
-- **One idea per test class.** Modules are split into sections that follow the "Writing Tests" chapter of the [JUnit 6.1.3 User Guide](https://docs.junit.org/6.1.3/). Each test class covers one feature, and its Javadoc explains the feature before the code uses it.
-- **Tests that prove what they teach.** Where JUnit's behaviour is the lesson, such as lifecycle order, display names or when a resource is closed, the tests check that behaviour themselves. If a claim in the comments were wrong, the build would fail.
-- **Failures on purpose.** Reading failure output is a skill. Some classes fail deliberately so you can see what a broken assertion, a timeout or a race condition looks like. The normal build excludes them, and you run them by name.
-
-## Who it is for?
-
-Java developers who have written some tests but want to use JUnit properly, and developers moving from JUnit 4 or 5. The first three modules assume no testing experience. The last three cover features many experienced developers have never used: argument aggregators, class templates, dynamic tests, the new JUnit 6.1 extensions and parallel execution.
-
-## How to use it ?
-
-Work through the modules in order. Each one has a README with its topics, domain classes and labs. For each section, read the test classes, run them, then change the production code on purpose and watch which tests catch it. The modules don't share code, so you can also jump straight to the one you need.
+The course has nine Maven modules, from a first `@Test` in Module 1 to test templates, dynamic tests and parallel execution in Modules 8 and 9. Each module has its own small production domain from banking and identity, such as bank accounts, IBAN validation, OAuth 2.0 tokens and audit logs, and the tests for each section are in their own package. The modules share no code, so you can work through them in order or start with the one you need.
 
 ## Table of Contents
 - [Java Unit Testing with JUnit 6](#java-unit-testing-with-junit-6)
-  - [What makes it different?](#what-makes-it-different)
-  - [Who it is for?](#who-it-is-for)
-  - [How to use it ?](#how-to-use-it-)
   - [Table of Contents](#table-of-contents)
   - [Getting started](#getting-started)
     - [Prerequisites](#prerequisites)
