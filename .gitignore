@@ -11,7 +11,7 @@ widgetsettings
 *.prefs
 .settings
 .idea
-.vscode/
+.vscode
 
 # Maven
 target/
