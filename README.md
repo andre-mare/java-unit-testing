@@ -16,14 +16,12 @@ The course has nine Maven modules, from a first `@Test` in Module 1 to test temp
     - [Prerequisites](#prerequisites)
     - [Build and Test](#build-and-test)
   - [Course Modules](#course-modules)
-  - [Project structure](#project-structure)
-  - [Running tests](#running-tests)
+  - [Running Tests](#running-tests)
     - [Tags and Module 5 profiles](#tags-and-module-5-profiles)
     - [Classes that need an explicit run](#classes-that-need-an-explicit-run)
-  - [Deliberately failing tests](#deliberately-failing-tests)
-  - [Parallel execution](#parallel-execution)
-  - [Technology stack](#technology-stack)
-  - [Project status](#project-status)
+  - [Deliberately Failing Tests](#deliberately-failing-tests)
+  - [Parallel Execution](#parallel-execution)
+  - [Technology Stack](#technology-stack)
   - [Resources](#resources)
   - [License](#license)
 
@@ -61,26 +59,7 @@ Work through the modules in order. They build on each other conceptually, but th
 | [Module 9](module-09/README.md) | Built-in extensions and parallel execution | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution |
 
 
-## Project structure
-
-```text
-java-unit-testing/
-├── pom.xml                    # Parent POM: Java version, JUnit BOM, plugins, default tag filter
-├── docs/
-│   └── JUnit 6 Course Outline.md
-├── module-01/                 # One directory per course module, module-01 to module-09
-│   ├── pom.xml                # Module name and any extra test dependencies
-│   └── src/
-│       ├── main/java/com/example/<domain>/       # Production code under test
-│       └── test/java/com/example/module_01/
-│           ├── section_01/                       # One package per course section
-│           └── support/                          # Shared test helpers, in some modules
-└── ...
-```
-
-Section packages match the outline's numbering, so section 7.3 is `module-07/src/test/java/com/example/module_07/section_03`. Test data files are in `src/test/resources`.
-
-## Running tests
+## Running Tests
 
 Run these commands from the repository root.
 
@@ -115,7 +94,7 @@ Surefire only discovers classes named `Test*`, `*Test`, `*Tests` or `*TestCase` 
 mvn test -pl module-03 -Dtest='A_*'
 ```
 
-## Deliberately failing tests
+## Deliberately Failing Tests
 
 Some classes fail on purpose so you can read real failure output. They carry the `expected-failure-tests` tag, which the parent POM excludes by default. To run one, clear the filter and name the class:
 
@@ -135,7 +114,7 @@ Maven reports `BUILD FAILURE` for these runs. That is the expected result.
 | 7 | `FlakyHuntDemoTest`, `ArgumentCountFailureDemoTest` |
 | 8 | `TemplateFailureDemoTest`, `DynamicFailureDemoTest` |
 
-## Parallel execution
+## Parallel Execution
 
 Tests run sequentially by default. To try parallel mode without changing any files, use:
 
@@ -150,7 +129,7 @@ mvn test \
 
 `AuditTrailRaceDemoTest` in Module 9 shows the same kind of race in isolation. It passes when run sequentially, including in the default build, and fails intermittently in parallel mode.
 
-## Technology stack
+## Technology Stack
 
 | Tool | Version | Used for | Scope |
 | --- | --- | --- | --- |
@@ -161,9 +140,6 @@ mvn test \
 | [Mockito](https://site.mockito.org/) | 5.24.0 | Mocking collaborators | Module 6 |
 | [Jimfs](https://github.com/google/jimfs) | 1.3.0 | In-memory file system for `@TempDir` | Module 9 |
 
-## Project status
-
-Modules 1 to 9 are implemented. The capstone described in the [course outline](docs/JUnit%206%20Course%20Outline.md), a payment-initiation test suite, hasn't been built yet.
 
 ## Resources
 
@@ -173,4 +149,4 @@ Modules 1 to 9 are implemented. The capstone described in the [course outline](d
 
 ## License
 
-Released under the [MIT License](LICENSE). Copyright (c) 2026 André Maré.
+Released under the [MIT License](LICENSE).
