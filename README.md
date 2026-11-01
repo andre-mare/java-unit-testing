@@ -48,15 +48,15 @@ Work through the modules in order. They build on each other conceptually, but th
 
 | Module | Level | Topics | Domain under test |
 | --- | --- | --- | --- |
-| [1. Foundations](module-01/README.md) | Beginner | First tests, test outcomes, class and method rules, lifecycle methods, the test tree, composed annotations | Calculator |
-| [2. Assertions, assumptions and exceptions](module-02/README.md) | Beginner | `Assertions`, AssertJ, `Assumptions`, `assertThrows` | Bank account |
-| [3. Readable and skippable tests](module-03/README.md) | Beginner | `@DisplayName`, display name generators, `@Disabled` | Password policy |
-| [4. Structuring test suites](module-04/README.md) | Intermediate | Test instance lifecycle, `@Nested`, test interfaces and contract tests | Bounded stack, money |
-| [5. Controlling what runs, in what order, and for how long](module-05/README.md) | Intermediate | Conditional execution, tags, execution order, `@Timeout` | App config, onboarding flow, rate limiter |
-| [6. Dependency injection](module-06/README.md) | Intermediate | Built-in and custom `ParameterResolver`s, Mockito | OAuth 2.0 client-credentials service |
-| [7. Data-driven tests](module-07/README.md) | Intermediate to advanced | `@RepeatedTest`, `@ParameterizedTest`, argument sources, conversion and aggregation, `@ParameterizedClass` | IBANs, payments, token validation |
-| [8. Templates and dynamic tests](module-08/README.md) | Advanced | `@TestTemplate`, `@ClassTemplate`, `@TestFactory` | Currency conversion, consents, primes, OAuth scopes |
-| [9. Built-in extensions and parallel execution](module-09/README.md) | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution | Audit log, amount formatting, session expiry, issuer settings |
+| [1. Foundations](module-01/) | Beginner | First tests, test outcomes, class and method rules, lifecycle methods, the test tree, composed annotations | Calculator |
+| [2. Assertions, assumptions and exceptions](module-02/) | Beginner | `Assertions`, AssertJ, `Assumptions`, `assertThrows` | Bank account |
+| [3. Readable and skippable tests](module-03/) | Beginner | `@DisplayName`, display name generators, `@Disabled` | Password policy |
+| [4. Structuring test suites](module-04/) | Intermediate | Test instance lifecycle, `@Nested`, test interfaces and contract tests | Bounded stack, money |
+| [5. Controlling what runs, in what order, and for how long](module-05/) | Intermediate | Conditional execution, tags, execution order, `@Timeout` | App config, onboarding flow, rate limiter |
+| [6. Dependency injection](module-06/) | Intermediate | Built-in and custom `ParameterResolver`s, Mockito | OAuth 2.0 client-credentials service |
+| [7. Data-driven tests](module-07/) | Intermediate to advanced | `@RepeatedTest`, `@ParameterizedTest`, argument sources, conversion and aggregation, `@ParameterizedClass` | IBANs, payments, token validation |
+| [8. Templates and dynamic tests](module-08/) | Advanced | `@TestTemplate`, `@ClassTemplate`, `@TestFactory` | Currency conversion, consents, primes, OAuth scopes |
+| [9. Built-in extensions and parallel execution](module-09/) | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution | Audit log, amount formatting, session expiry, issuer settings |
 
 
 ## Running Tests
