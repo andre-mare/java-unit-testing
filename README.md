@@ -17,7 +17,7 @@ The course has nine Maven modules, from a first `@Test` in Module 1 to test temp
     - [Build and Test](#build-and-test)
   - [Course Modules](#course-modules)
   - [Running Tests](#running-tests)
-    - [Tags and Module 5 profiles](#tags-and-module-5-profiles)
+    - [Tags and Module 5 Profiles](#tags-and-module-5-profiles)
     - [Classes that need an explicit run](#classes-that-need-an-explicit-run)
   - [Deliberately Failing Tests](#deliberately-failing-tests)
   - [Parallel Execution](#parallel-execution)
@@ -46,17 +46,17 @@ The build should end with `BUILD SUCCESS`. Some tests are reported as skipped on
 
 Work through the modules in order. They build on each other conceptually, but their code is independent, so you can also run any module on its own.
 
-| Module | Title | Level | Topics |
+| Module | Level | Topics | Domain under test |
 | --- | --- | --- | --- |
-| [Module 1](module-01/README.md) | Foundations | Beginner | First tests, test outcomes, class and method rules, lifecycle methods, the test tree, composed annotations |
-| [Module 2](module-02/README.md) | Assertions, assumptions and exceptions | Beginner | `Assertions`, AssertJ, `Assumptions`, `assertThrows` |
-| [Module 3](module-03/README.md) | Readable and skippable tests | Beginner | `@DisplayName`, display name generators, `@Disabled` |
-| [Module 4](module-04/README.md) | Structuring test suites | Intermediate | Test instance lifecycle, `@Nested`, test interfaces and contract tests |
-| [Module 5](module-05/README.md) | Controlling what runs, in what order, and for how long | Intermediate | Conditional execution, tags, execution order, `@Timeout` |
-| [Module 6](module-06/README.md) | Dependency injection | Intermediate | Built-in and custom `ParameterResolver`s, Mockito |
-| [Module 7](module-07/README.md) | Data-driven tests | Intermediate to advanced | `@RepeatedTest`, `@ParameterizedTest`, argument sources, conversion and aggregation, `@ParameterizedClass` |
-| [Module 8](module-08/README.md) | Templates and dynamic tests | Advanced | `@TestTemplate`, `@ClassTemplate`, `@TestFactory` |
-| [Module 9](module-09/README.md) | Built-in extensions and parallel execution | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution |
+| [1. Foundations](module-01/README.md) | Beginner | First tests, test outcomes, class and method rules, lifecycle methods, the test tree, composed annotations | Calculator |
+| [2. Assertions, assumptions and exceptions](module-02/README.md) | Beginner | `Assertions`, AssertJ, `Assumptions`, `assertThrows` | Bank account |
+| [3. Readable and skippable tests](module-03/README.md) | Beginner | `@DisplayName`, display name generators, `@Disabled` | Password policy |
+| [4. Structuring test suites](module-04/README.md) | Intermediate | Test instance lifecycle, `@Nested`, test interfaces and contract tests | Bounded stack, money |
+| [5. Controlling what runs, in what order, and for how long](module-05/README.md) | Intermediate | Conditional execution, tags, execution order, `@Timeout` | App config, onboarding flow, rate limiter |
+| [6. Dependency injection](module-06/README.md) | Intermediate | Built-in and custom `ParameterResolver`s, Mockito | OAuth 2.0 client-credentials service |
+| [7. Data-driven tests](module-07/README.md) | Intermediate to advanced | `@RepeatedTest`, `@ParameterizedTest`, argument sources, conversion and aggregation, `@ParameterizedClass` | IBANs, payments, token validation |
+| [8. Templates and dynamic tests](module-08/README.md) | Advanced | `@TestTemplate`, `@ClassTemplate`, `@TestFactory` | Currency conversion, consents, primes, OAuth scopes |
+| [9. Built-in extensions and parallel execution](module-09/README.md) | Advanced | `@TempDir`, `@AutoClose`, `@DefaultLocale`, `@DefaultTimeZone`, system properties, parallel execution | Audit log, amount formatting, session expiry, issuer settings |
 
 
 ## Running Tests
@@ -70,7 +70,7 @@ Run these commands from the repository root.
 | Run one class | `mvn test -pl module-04 -Dtest=BoundedStackNestedTest` |
 | Run one tag across all modules | `mvn test -Dgroups=fast` |
 
-### Tags and Module 5 profiles
+### Tags and Module 5 Profiles
 
 Module 5 defines Maven profiles for its tags:
 
