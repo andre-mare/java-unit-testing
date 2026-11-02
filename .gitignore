@@ -1,7 +1,6 @@
 # IDEs and editors
 *.iml
 *.db
-../../../../Library/Mobile Documents/com~apple~CloudDocs/GitHub Source Code/javanibble/camunda-bpmn-service-task/.idea
 overlays
 widgetsettings
 *.sublime-project
