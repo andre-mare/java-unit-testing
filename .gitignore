@@ -1,43 +1,62 @@
-# IDEs and editors
-*.iml
-*.db
-overlays
-widgetsettings
-*.sublime-project
-*.sublime-workspace
-*.classpath
-*.project
-*.prefs
-.settings
-.idea
-.vscode
+# ==========================================
+# Compiled Class Files & Packages
+# ==========================================
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
+# ==========================================
+# Build Output Directories
+# ==========================================
 # Maven
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
 
-# Frontend
-node_modules
-bower_components
-.bower.json
-statics/**/dist
-node_tmp
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+!gradle-wrapper.jar
 
-# Temp or generated files/directories
-.bin
-*.log
-*.log.1
-*.swp
-.h2.server.properties
-*.properties.backup
-logs
-.tmp
-tmp
-~$*.*
-.~lock.*
-*.lck
+# ==========================================
+# IDE Specific Files
+# ==========================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.settings/
+.buildpath
+.project
+.classpath
+bin/
+
+# VS Code
+.vscode/
+
+# ==========================================
+# OS & System Junk Files
+# ==========================================
 .DS_Store
-
-# Database
-data/default/*.db
-*.lock.db
-*.trace.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
